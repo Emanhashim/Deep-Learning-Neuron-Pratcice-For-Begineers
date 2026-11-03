@@ -5,11 +5,14 @@ study_hours = 0.7
 attendance = 0.85
 
 # Step 2: Define weights
-weight_1 = 0.6
-weight_2 = 0.4
+# weight_1 = 0.6
+# weight_2 = 0.4
+
+weight_1 =0.9
+weight_2 = 0.1
 
 # Step 3: Define bias
-bias = 0.1
+bias = -0.5
 
 # Step 4: Calculate weighted sum
 z = (
