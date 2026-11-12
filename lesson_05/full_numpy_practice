@@ -1,0 +1,29 @@
+import numpy as np
+
+#X	Input features
+#y	Correct target values
+#X[0]	First input: 1
+#y[0]	First correct output: 2
+
+X = np.array([1.0, 2.0, 3.0, 4.0])
+y = np.array([2.0, 4.0, 6.0, 8.0])
+
+#Initialize the model parameters
+weight = 0.5
+bias = 0.5
+
+#Forward propagation
+predictions = weight * X + bias
+
+#Calculate the loss cause the forwardpropagation result is [1.0,1.5,2.0,2.5]
+#  but the expected result is [2.0,4.0,6.0,8.0] so the loss is calculated by the mean squared error
+
+errors = predictions - y
+
+loss = np.mean(errors ** 2)
+
+
+#Calculate gradients
+dw = (2 / len(X)) * np.sum(errors * X)
+
+db = (2 / len(X)) * np.sum(errors)

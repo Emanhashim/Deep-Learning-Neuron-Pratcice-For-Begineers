@@ -1,0 +1,13 @@
+import torch
+
+weight = torch.tensor(3.0, requires_grad=True)
+
+x = torch.tensor(2.0)
+y = torch.tensor(10.0)
+
+prediction = weight * x
+loss = (prediction - y) ** 2
+
+loss.backward()
+
+print("Gradient:", weight.grad.item())
